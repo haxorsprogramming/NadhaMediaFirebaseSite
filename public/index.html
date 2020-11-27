@@ -1,89 +1,295 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en" class="minimal-style is-menu-fixed is-always-fixed is-selection-shareable blog-animated header-light header-small" data-effect="slideUp">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta name="description" content="Impose - Responsive HTML5 Template">
+    <meta name="keywords" content="personal, blog, html5">
+    <meta name="author" content="Pixelwars">
+    <title>Just Hasnah - Just a little web</title>
+    <!-- FAV and TOUCH ICONS -->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png" />
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans:400,400i,700,700i|Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://demo.getstisla.com/assets/modules/fontawesome/css/all.min.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="css/fluidbox.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/selection-sharer.css">
+    <link rel="stylesheet" type="text/css" href="css/rotate-words.css">
+    <link rel="stylesheet" type="text/css" href="css/align.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
+    <link rel="stylesheet" type="text/css" href="css/768.css">
+    <link rel="stylesheet" type="text/css" href="css/992.css">
+    <!-- INITIAL SCRIPTS -->
+    
+    <script src="js/modernizr.min.js"></script>
+</head>
+<body onload="initFunc">
+    <!-- page -->
+    <div id="page" class="hfeed site">
+        <!-- header -->
+        <header id="masthead" class="site-header" role="banner">
+            <!-- site-navigation -->
+            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+                <!-- layout-medium -->
+                <div class="layout-medium">
+                    <!-- site-title : image-logo -->
+                    <h1 class="site-title">
+                        <a href="index.html" rel="home">
+                            <img src="img/logo.png" alt="logo">
+                            <span class="screen-reader-text">Just Hasnah</span>
+                        </a>
+                    </h1>
+                    <a class="menu-toggle"><span class="lines"></span></a>
+                    <!-- nav-menu -->
+                    <div class="nav-menu">
+                        <ul>
+                            <li><a href="index.php">Home</a>
+                            <li><a href="me.php">About Me</a>
+                            <li><a href="#!">My Works</a>
+                            <li><a href="#!">Blog</a>
+                            <li><a href="#!">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- nav-menu -->
+                    <!-- search-container -->
+                    <div class="search-container">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.1.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.1.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.1.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.1.1/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.1.1/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.1.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.1.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.1.1/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.1.1/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.1.1/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+                        <div class="search-box" role="search">
+                            <form method="get" class="search-form" action="#">
+                                <label>Search Here
+                                    <input type="search" id="search-field" placeholder="type and hit enter" name="s">
+                                </label>
+                                <input type="submit" class="search-submit" value="Search">
+                            </form>
+                        </div>
+                    </div>
+                    <!-- search-container -->
+                    <!-- social-container -->
+                    <div class="social-container">
+                        <a class="social-link" href="#"><i class='fab fa-github'></i></a>
+                        <a class="social-link" href="#"><i class='fab fa-twitter'></i></a>
+                    </div>
+                    <!-- social-container -->
+                </div>
+                <!-- layout-medium -->
+            </nav>
+            <!-- site-navigation -->
+        </header>
+        <!-- header -->
+        <!-- site-main -->
+        <div id="main" class="site-main">
+           <div class="layout-medium" id='divUtama'>
+                <div id="primary" class="content-area with-sidebar">
+                    <!-- site-content -->
+                    <div id="content" class="site-content" role="main">
+                        <!-- BLOG LIST -->
+                        <div class="blog-bold  blog-stream">
+                            <!-- post -->
+                            <article class="hentry has-post-thumbnail" v-for='bd in blog'>
+                                <div class="post-thumbnail" style="background-image:url(img/pos/pos_1.jpg)">
+                                    <!-- .entry-header -->
+                                    <header class="entry-header">
+                                        <!-- .entry-meta -->
+                                        <div class="entry-meta">
+                                            <span class="cat-links">
+                                                <a href="#" title="View all posts in Life" rel="category tag">Life</a>
+                                            </span>
+                                        </div>
+                                        <h3 class="entry-title" style="text-transform: capitalize;">
+                                            <a href="#!">{{bd.title}}</a>
+                                        </h3>
+                                        <!-- .entry-meta -->
+                                        <div class="entry-meta">
+                                            <span class="entry-date">
+                                                <time class="entry-date" datetime="2014-07-13T04:34:10+00:00">July 13, 2014</time>
+                                            </span>
+                                            <span class="comment-link">
+                                                <a href="#comments">4 Comments</a>
+                                            </span>
+                                        </div>
+                                        <!-- .entry-meta -->
+                                        <p><a href="#!" class="more-link">View Post</a></p>
+                                    </header>
+                                    <!-- .entry-header -->
+                                </div>
+                            </article>
+                        </div>
+                        <!-- BLOG BOLD -->
+                        <!-- post pagination -->
+                        <nav class="post-pagination">
+                            <ul class="pagination">
+                                <li class="pagination-first"><a href="#!"> First </a></li>
+                                <li class="pagination"><a href="#!" rel="prev"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="pagination-num"><a href="#!"> 1 </a></li>
+                                <li class="pagination-num"><a href="#!"> 2 </a></li>
+                                <li class="pagination-num"><a href="#!"> 3 </a></li>
+                                <li class="pagination"><a href="#!" rel="prev"><i class="fas fa-angle-right"></i></a></li>
+                                <li class="pagination-last"><a href="#!"> Last </a> </li>
+                            </ul>
+                        </nav>
+                        <!-- post pagination -->
+                    </div>
+                    <!-- site-content -->
+                </div>
+                <!-- primary -->
+                <!-- #secondary -->
+                <div id="secondary" class="widget-area sidebar" role="complementary">
+                    <!-- widget : text -->
+                    <aside class="widget widget_text">
+                        <h3 class="widget-title">About Me</h3>
+                        <div class="textwidget">
+                            <p><img src="img/about-me.jpg" alt="avatar">
+                            </p>
+                            <p>Hello. I am {{nama}} ,,, Mom of NadhaMedia, project manager at <a href='#!'>Haxorsprogramming</a>, and the lazy writer.</p>
+                        </div>
+                    </aside>
+                    <!-- widget : text -->
+                    <!-- widget : text -->
+                    <aside class="widget widget_text">
+                        <h3 class="widget-title">Follow Me</h3>
+                        <div class="textwidget">
+                            <p>
+                                <a class="social-link" href="#"><i class='fab fa-github'></i></a>
+                                <a class="social-link" href="#"><i class='fab fa-twitter'></i></a>
+                            </p>
+                        </div>
+                    </aside>
+                    <!-- widget : text -->
+                    <!-- widget :  MailChimp for WordPress Plugin -->
+                    <aside class="widget widget_mc4wp_widget">
+                        <h3 class="widget-title">Subscribe To Newsletter</h3>
+                        <div class="form mc4wp-form">
+                            <form method="post">
+                                <p>
+                                    <label>Email address: </label>
+                                    <input type="email" name="EMAIL" placeholder="Your email address" required="">
+                                </p>
+                                <p>
+                                    <input type="submit" value="Sign up">
+                                </p>
+                            </form>
+                        </div>
+                    </aside>
+                    <!-- widget :  MailChimp for WordPress Plugin -->
+                    <!-- widget : popular-posts -->
+                    <!-- styles for plugin : https://wordpress.org/plugins/top-10 -->
+                    <aside class="widget widget_widget_tptn_pop">
+                        <h3 class="widget-title">Trending Posts</h3>
+                        <div class="tptn_posts tptn_posts_widget">
+                            <ul>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+                                <li>
+                                    <a href="#" class="tptn_link">
+                                        <img src="http://themes.pixelwars.org/impose-html/images/blog/p2.jpg" alt="post-image" class="tptn_thumb">
+                                    </a>
+                                    <span class="tptn_after_thumb">
+                                        <a href="#" class="tptn_link"><span class="tptn_title">Feel The Wind</span></a>
+                                        <!--<span class="tptn_author"> by <a href="#">Johnny Doe</a></span>-->
+                                        <span class="tptn_date"> September 3, 2014</span>
+                                    </span>
+                                </li>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- widget : popular-posts -->
+                    <!-- widget : categories -->
+                    <aside class="widget widget_categories">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul>
+                            <li class="cat-item"><a href="#" title="View all posts filed under Nature">Nature</a></li>
+                            <li class="cat-item"><a href="#" title="View all posts filed under Life">Life</a></li>
+                            <li class="cat-item"><a href="#" title="View all posts filed under Adventure">Adventure</a>
+                            </li>
+                            <li class="cat-item"><a href="#" title="View all posts filed under Freebies">Freebies</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <!-- widget : categories -->
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+
+                    <!-- widget : text -->
+                    <aside class="widget widget_text">
+                        <!--<h3 class="widget-title">BANNER</h3>-->
+                        <div class="textwidget">
+                            <a href="#"><img src="img/banner.jpg" alt="banner"></a>
+                        </div>
+                    </aside>
+                </div>
+                <!-- #secondary -->
+            </div>
+            <!-- layout -->
+        </div>
+        <!-- site-main -->
+       <!-- site-footer -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <!-- layout-medium -->
+  <div class="layout-medium">
+      <!-- site-title-wrap -->
+      <div class="site-title-wrap">
+
+          <h1 class="site-title">
+              <a href="index.html" rel="home">
+                  <img src="img/logo.png" alt="logo">
+              </a>
+          </h1>
+          <!-- site-title -->
+          <p class="site-description">just living the life as it goes by</p>
+      </div>
+      <!-- site-title-wrap -->
+      <!-- footer-social -->
+      <div class="footer-social">
+          <div class="textwidget">
+              <a class="social-link" href="#"><i class='fab fa-github'></i></a>
+              <a class="social-link" href="#"><i class='fab fa-twitter'></i></a>
+          </div>
+      </div>
+  </div>
+  <!-- layout-medium -->
+  <!-- .site-info -->
+  <div class="site-info">
+      <!-- layout-medium -->
+      <div class="layout-medium">
+          <div class="textwidget">crafted with <i class="fas fa-heart"></i> by Pixelwars</div>
+      </div>
+      <!-- layout-medium -->
+  </div>
+  <!-- .site-info -->
+</footer>
+<!-- site-footer -->
+</div>
+<!-- page -->
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+if (!window.jQuery) {
+  document.write('<script src="js/jquery-3.1.1.min.js"><\/script>');
+}
+</script>
+<script src="js/jquery-migrate-3.0.0.min.js"></script>
+<script src="js/fastclick.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/jquery.viewport.mini.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.fluidbox.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/selection-sharer.js"></script>
+<script src="js/socialstream.jquery.js"></script>
+<script src="js/jquery.collagePlus.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/shortcodes.js"></script>
+<script src="js/hasnah.js"></script>
+</body>
+<!-- InstanceEnd -->
 </html>
